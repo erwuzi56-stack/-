@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026美加墨世界杯福利自主申领</title>
+    <title>2026美加墨世界杯福利系统</title>
     <style>
         :root {
             --primary: #10b981;
@@ -13,104 +13,103 @@
             --text: #f8fafc;
             --text-muted: #94a3b8;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
         body { background-color: var(--bg); color: var(--text); padding: 16px; line-height: 1.5; }
-        .container { max-width: 500px; margin: 0 auto; background: var(--card); padding: 20px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid #334155; }
-        h1 { text-align: center; color: var(--secondary); font-size: 22px; margin-bottom: 5px; text-transform: uppercase; font-weight: 800; }
+        .container { max-width: 500px; margin: 0 auto; background: var(--card); padding: 20px; border-radius: 16px; border: 1px solid #334155; }
+        h1 { text-align: center; color: var(--secondary); font-size: 22px; margin-bottom: 5px; font-weight: 800; }
         .subtitle { text-align: center; font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
         .tab-group { display: flex; background: #0f172a; padding: 4px; border-radius: 8px; margin-bottom: 20px; }
-        .tab-btn { flex: 1; background: transparent; border: none; color: var(--text-muted); padding: 10px; font-weight: bold; border-radius: 6px; cursor: pointer; font-size: 14px; outline: none;}
+        .tab-btn { flex: 1; background: transparent; border: none; color: var(--text-muted); padding: 10px; font-weight: bold; border-radius: 6px; cursor: pointer; font-size: 14px; }
         .tab-btn.active { background: var(--primary); color: white; }
         .panel { display: none; }
         .panel.active { display: block; }
         .form-group { margin-bottom: 16px; }
-        label { display: block; font-size: 14px; margin-bottom: 6px; color: #cbd5e1; font-weight: 500; }
+        label { display: block; font-size: 14px; margin-bottom: 6px; color: #cbd5e1; }
         input, select { width: 100%; padding: 12px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: white; font-size: 15px; outline: none; }
-        input:focus, select:focus { border-color: var(--primary); }
         .radio-box { background: #0f172a; padding: 12px; border-radius: 8px; margin-bottom: 8px; border: 1px solid #334155; display: flex; align-items: center; cursor: pointer; }
-        .radio-box input { width: auto; margin-right: 10px; cursor: pointer; }
-        .calc-result { background: rgba(16, 185, 129, 0.1); border: 1px dashed var(--primary); padding: 12px; border-radius: 8px; color: #34d399; font-size: 14px; margin-top: 15px; font-weight: 500; min-height: 48px; display: flex; align-items: center;}
-        .btn-submit { width: 100%; background: linear-gradient(135deg, var(--secondary), #d97706); border: none; color: white; padding: 14px; font-size: 16px; font-weight: bold; border-radius: 8px; margin-top: 15px; cursor: pointer; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+        .radio-box input { width: auto; margin-right: 10px; }
+        .calc-result { background: rgba(16, 185, 129, 0.1); border: 1px dashed var(--primary); padding: 12px; border-radius: 8px; color: #34d399; font-size: 14px; margin-top: 15px; min-height: 48px; display: flex; align-items: center; }
+        .btn-submit { width: 100%; background: linear-gradient(135deg, var(--secondary), #d97706); border: none; color: white; padding: 14px; font-size: 16px; font-weight: bold; border-radius: 8px; margin-top: 15px; cursor: pointer; }
         .code-box { background: #0f172a; border: 1px solid #22c55e; padding: 15px; border-radius: 8px; margin-top: 15px; display: none; position: relative; }
-        .code-title { font-size: 12px; color: #22c55e; margin-bottom: 5px; font-weight: bold;}
+        .code-title { font-size: 12px; color: #22c55e; margin-bottom: 5px; }
         .code-text { font-family: monospace; color: var(--secondary); font-size: 15px; word-break: break-all; padding-right: 65px; font-weight: bold; }
-        .btn-copy { position: absolute; right: 10px; top: 50%; transform: translateY(-10%); background: var(--primary); border: none; color: white; padding: 6px 12px; font-size: 12px; border-radius: 4px; cursor: pointer; font-weight: bold;}
+        .btn-copy { position: absolute; right: 10px; top: 50%; transform: translateY(-10%); background: var(--primary); border: none; color: white; padding: 6px 12px; font-size: 12px; border-radius: 4px; cursor: pointer; }
         .footer-info { margin-top: 25px; padding-top: 15px; border-top: 1px solid #334155; font-size: 12px; color: var(--text-muted); }
-        .footer-info p { margin-bottom: 4px; }
         .highlight { color: #f43f5e; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>2026世界杯福利系统</h1>
-    <div class="subtitle">自助试算福利 · 一键生成申请代码</div>
+    <h1>2026美加墨世界杯</h1>
+    <div class="subtitle">自主试算福利 · 一键生成申请代码</div>
 
     <div class="tab-group">
-        <button id="btn-tab-newbie" class="tab-btn active" onclick="switchTab('newbie')">新人尊享三重礼</button>
-        <button id="btn-tab-referral" class="tab-btn" onclick="switchTab('referral')">呼朋唤友裂变奖</button>
+        <button id="tab-newbie" class="tab-btn active" onclick="switchTab('newbie')">新人尊享</button>
+        <button id="tab-ref" class="tab-btn" onclick="switchTab('referral')">呼朋唤友活动</button>
     </div>
 
-    <!-- 选项卡 1：新人尊享 -->
+    <!-- Panel 1: Newbie -->
     <div id="panel-newbie" class="panel active">
         <div class="form-group">
-            <label>输入首次存款金额 (元):</label>
-            <input type="number" id="newbie-amount" placeholder="请在此输入您的存金金额..." oninput="calcNewbie()">
+            <label>存款金额：</label>
+            <input type="number" id="newbie-amount" placeholder="请输入首存金额..." oninput="calcNewbie()">
         </div>
         <div class="form-group">
-            <label>选择想要参与的活动:</label>
+            <label>选择活动：</label>
             <div class="radio-box" onclick="setRadio('act1')">
                 <input type="radio" name="newbie-act" id="act1" value="act1" checked onchange="calcNewbie()">
-                <span>活动一：全额包赔福利</span>
+                <span>活动一：全额包赔</span>
             </div>
             <div class="radio-box" onclick="setRadio('act2')">
                 <input type="radio" name="newbie-act" id="act2" value="act2" onchange="calcNewbie()">
-                <span>活动二：特惠赠送彩金</span>
+                <span>活动二：赠送彩金</span>
             </div>
             <div class="radio-box" onclick="setRadio('act3')">
                 <input type="radio" name="newbie-act" id="act3" value="act3" onchange="calcNewbie()">
-                <span>活动三：超级金额返还</span>
+                <span>活动三：金额返</span>
             </div>
         </div>
-        <div class="calc-result" id="newbie-result">💡 请先输入存款金额...</div>
+        <div class="calc-result" id="newbie-result">💡 输入金额后可查看选择的活动福利金额</div>
         <button class="btn-submit" onclick="submitForm('newbie')">确认获取代码</button>
     </div>
 
-    <!-- 选项卡 2：呼朋唤友 -->
+    <!-- Panel 2: Referral -->
     <div id="panel-referral" class="panel">
         <div class="form-group">
-            <label>被推荐人（好友）首存金额 (元):</label>
-            <input type="number" id="ref-amount" placeholder="请在此输入好友的首存金额..." oninput="calcReferral()">
+            <label>被推荐人首存金额：</label>
+            <input type="number" id="ref-amount" placeholder="请输入被推荐人首存金额..." oninput="calcReferral()">
         </div>
         <div class="form-group">
-            <label>推荐人（您自己）选择福利形式:</label>
+            <label>推荐人二选一福利：</label>
             <select id="ref-type" onchange="calcReferral()">
-                <option value="bonus">选项 A：领取推荐人彩金</option>
-                <option value="cover">选项 B：领取包赔福利</option>
+                <option value="bonus">推荐人彩金</option>
+                <option value="cover">推荐人包赔</option>
             </select>
         </div>
-        <div class="calc-result" id="referral-result">💡 请先输入好友的首存金额...</div>
+        <div class="calc-result" id="referral-result">💡 输入金额后可查看选择的活动福利金额</div>
         <button class="btn-submit" onclick="submitForm('referral')">确认获取代码</button>
     </div>
 
-    <!-- 代码输出容器 -->
+    <!-- Code Output -->
     <div class="code-box" id="code-container">
-        <div class="code-title">您的专属兑换代码已生成：</div>
+        <div class="code-title">自动生成代码成功：</div>
         <div class="code-text" id="code-display"></div>
         <button class="btn-copy" onclick="copyCode()">复制</button>
     </div>
 
-    <!-- 底部下载及联系信息 -->
+    <!-- Footer Requirements -->
     <div class="footer-info">
-        <p>⚠️ <span class="highlight">规则：</span>介绍新会员需在申请完首存后连续投注3天以上，一次性会员作废。</p>
-        <p>📱 <span style="color:#60a5fa">软件下载：</span>安卓在应用宝/苹果在App Store搜索【企聊宝】</p>
-        <p>🔑 <span style="color:#f59e0b">企业邀请码：</span><strong>YB888</strong></p>
-        <p>👤 <span style="color:#34d399">客服对接：</span>添加ID联系管理阿星 <strong style="color:white;background:#475569;padding:1px 4px;border-radius:3px;">x0806</strong> 发送代码领奖</p>
+        <p>⚠️ <span class="highlight">活动规则：</span>一次性会员作废。介绍新会员需在申请完首存福利后，连续投注三天以上可以领取介绍彩金。</p>
+        <p>📱 <strong>安卓下载：</strong>应用市场搜索（没有搜索到下载应用宝搜索）</p>
+        <p>🍏 <strong>苹果下载：</strong>苹果商城搜索企聊宝</p>
+        <p>🔑 <strong>企业邀请码：</strong><strong style="color:var(--secondary)">YB888</strong></p>
+        <p>👤 <strong>联系管理：</strong>添加下方ID联系管理阿星发送代码领取选择的活动</p>
+        <p>🆔 <strong>管理阿星：</strong><strong style="color:white;background:#475569;padding:2px 6px;border-radius:4px;">x0806</strong></p>
     </div>
 </div>
 
 <script>
-    // 基础数据字典
     const newbieRules = {
         act1: [{d:50,v:50},{d:100,v:100},{d:300,v:300},{d:500,v:500},{d:1000,v:1000},{d:3000,v:1200},{d:5000,v:1800},{d:10000,v:2000}],
         act2: [{d:50,v:18},{d:100,v:38},{d:300,v:48},{d:500,v:88},{d:1000,v:128},{d:3000,v:168},{d:5000,v:208},{d:10000,v:588}],
@@ -121,19 +120,19 @@
     ];
 
     function switchTab(tab) {
-        document.getElementById('btn-tab-newbie').classList.remove('active');
-        document.getElementById('btn-tab-referral').classList.remove('active');
+        document.getElementById('tab-newbie').classList.remove('active');
+        document.getElementById('tab-ref').classList.remove('active');
         document.getElementById('panel-newbie').classList.remove('active');
         document.getElementById('panel-referral').classList.remove('active');
+        document.getElementById('code-container').style.display = 'none';
         
         if(tab === 'newbie'){
-            document.getElementById('btn-tab-newbie').classList.add('active');
+            document.getElementById('tab-newbie').classList.add('active');
             document.getElementById('panel-newbie').classList.add('active');
         }else{
-            document.getElementById('btn-tab-referral').classList.add('active');
+            document.getElementById('tab-ref').classList.add('active');
             document.getElementById('panel-referral').classList.add('active');
         }
-        document.getElementById('code-container').style.display = 'none';
     }
 
     function setRadio(id) {
@@ -146,29 +145,33 @@
         return sorted.find(r => amount >= r.d);
     }
 
-    // 1. 输入金额实时更新选择的活动福利
     function calcNewbie() {
         let amt = parseFloat(document.getElementById('newbie-amount').value);
         let act = document.querySelector('input[name="newbie-act"]:checked').value;
         let resDiv = document.getElementById('newbie-result');
-        document.getElementById('code-container').style.display = 'none'; // 输入变动时隐藏旧代码
+        document.getElementById('code-container').style.display = 'none';
         
-        if(!amt || amt <= 0) { resDiv.innerHTML = "💡 请先输入存款金额..."; return; }
-        
+        if(!amt || amt <= 0) { resDiv.innerHTML = "💡 输入金额后可查看选择的活动福利金额"; return; }
         let match = matchRule(amt, newbieRules[act]);
         if(!match) { resDiv.innerHTML = "❌ 未达到该活动最低起存门槛金额"; return; }
 
-        if(act === 'act1') resDiv.innerHTML = `✅ 已选【活动一全额包赔】，对应档位:${match.d}元 ➔ 可获享 <strong style="color:#f59e0b;font-size:16px;">${match.v}元</strong> 全额包赔金！`;
-        if(act === 'act2') resDiv.innerHTML = `✅ 已选【活动二赠送彩金】，对应档位:${match.d}元 ➔ 可额外获赠 <strong style="color:#f59e0b;font-size:16px;">${match.v}元</strong> 现金彩金！`;
-        if(act === 'act3') resDiv.innerHTML = `✅ 已选【活动三金额返还】，对应档位:${match.d}元 ➔ 总返还 <strong style="color:#f59e0b;font-size:16px;">${match.v}元</strong> (每天返${match.p}元，连续返还 ${match.t} 天)！`;
+        if(act === 'act1') resDiv.innerHTML = `📈 对应档位:${match.d}元 ➔ 包赔彩金金额: <strong style="color:var(--secondary);font-size:16px;">${match.v}元</strong>`;
+        if(act === 'act2') resDiv.innerHTML = `📈 对应档位:${match.d}元 ➔ 赠送彩金金额: <strong style="color:var(--secondary);font-size:16px;">${match.v}元</strong>`;
+        if(act === 'act3') resDiv.innerHTML = `📈 对应档位:${match.d}元 ➔ 首存金额返: <strong style="color:var(--secondary);font-size:16px;">${match.v}元</strong> (每天返${match.p}元, 天数:${match.t}天返完)`;
     }
 
     function calcReferral() {
         let amt = parseFloat(document.getElementById('ref-amount').value);
         let type = document.getElementById('ref-type').value;
         let resDiv = document.getElementById('referral-result');
-        document.getElementById('code-container').style.display = 'none'; // 输入变动时隐藏旧代码
+        document.getElementById('code-container').style.display = 'none';
         
-        if(!amt || amt <= 0) { resDiv.innerHTML = "💡 请先输入好友的首存金额..."; return; }
-
+        if(!amt || amt <= 0) { resDiv.innerHTML = "💡 输入金额后可查看选择的活动福利金额"; return; }
         let match = matchRule(amt, refRules);
+        if(!match) { resDiv.innerHTML = "❌ 被推荐人首存未达到最低推荐门槛(100元)"; return; }
+
+        if(type === 'bonus') resDiv.innerHTML = `📈 对应档位:${match.d}元 ➔ 推荐人可领彩金: <strong style="color:var(--secondary);font-size:16px;">${match.b}元</strong>`;
+        if(type === 'cover') resDiv.innerHTML = `📈 对应档位:${match.d}元 ➔ 推荐人可领包赔: <strong style="color:var(--secondary);font-size:16px;">${match.c}元</strong>`;
+    }
+
+    function submitForm(type) {
