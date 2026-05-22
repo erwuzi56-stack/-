@@ -3,149 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026美加墨世界杯</title>
+    <title>2026美加墨世界杯福利自主申领</title>
     <style>
         :root {
-            --bg-color: #0d1b3e;
-            --card-bg: #1a2c5b;
-            --accent-gold: #fbc02d;
-            --accent-red: #d32f2f;
-            --text-light: #ffffff;
+            --primary: #10b981;
+            --secondary: #f59e0b;
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
         }
-
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft YaHei', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-light);
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .poster-container {
-            background: linear-gradient(135deg, #0d1b3e 0%, #1a2c5b 100%);
-            border: 4px solid var(--accent-gold);
-            border-radius: 16px;
-            width: 100%;
-            max-width: 600px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            text-align: center;
-            box-sizing: border-box;
-        }
-
-        .title {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-        }
-
-        .download-info {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .highlight-gold {
-            color: var(--accent-gold);
-            font-weight: bold;
-        }
-
-        .invite-box {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--accent-gold);
-            background-color: rgba(251, 192, 45, 0.1);
-            border: 2px dashed var(--accent-gold);
-            padding: 12px;
-            border-radius: 8px;
-            margin: 25px 0;
-            letter-spacing: 1px;
-        }
-
-        .admin-box {
-            background-color: var(--accent-red);
-            color: var(--text-light);
-            border-radius: 50px;
-            padding: 15px 20px;
-            margin: 20px 0;
-            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
-        }
-
-        .admin-box .sub-title {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 5px;
-        }
-
-        .admin-box .contact-id {
-            font-size: 1.3rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .code-box {
-            border: 2px solid var(--accent-red);
-            background-color: transparent;
-            color: var(--accent-red);
-            border-radius: 50px;
-            padding: 12px 20px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-top: 25px;
-        }
-
-        .code-space {
-            display: inline-block;
-            width: 100px;
-            border-bottom: 2px solid var(--accent-red);
-            margin: 0 10px;
-            vertical-align: middle;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); padding: 16px; line-height: 1.5; }
+        .container { max-width: 500px; margin: 0 auto; background: var(--card); padding: 20px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid #334155; }
+        h1 { text-align: center; color: var(--secondary); font-size: 22px; margin-bottom: 5px; text-transform: uppercase; font-weight: 800; }
+        .subtitle { text-align: center; font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+        .tab-group { display: flex; background: #0f172a; padding: 4px; border-radius: 8px; margin-bottom: 20px; }
+        .tab-btn { flex: 1; background: transparent; border: none; color: var(--text-muted); padding: 10px; font-weight: bold; border-radius: 6px; cursor: pointer; font-size: 14px; }
+        .tab-btn.active { background: var(--primary); color: white; }
+        .panel { display: none; }
+        .panel.active { display: block; }
+        .form-group { margin-bottom: 16px; }
+        label { display: block; font-size: 14px; margin-bottom: 6px; color: #cbd5e1; font-weight: 500; }
+        input, select { width: 100%; padding: 12px; background: #0f172a; border: 1px solid #334155; rounded: 8px; border-radius: 8px; color: white; font-size: 15px; outline: none; }
+        input:focus, select:focus { border-color: var(--primary); }
+        .radio-box { background: #0f172a; padding: 12px; border-radius: 8px; margin-bottom: 8px; border: 1px solid #334155; display: flex; align-items: center; cursor: pointer; }
+        .radio-box input { width: auto; margin-right: 10px; }
+        .calc-result { background: rgba(16, 185, 129, 0.1); border: 1px dashed var(--primary); padding: 12px; border-radius: 8px; color: #34d399; font-size: 14px; margin-top: 15px; font-weight: 500; }
+        .btn-submit { width: 100%; background: linear-gradient(135deg, var(--secondary), #d97706); border: none; color: white; padding: 14px; font-size: 16px; font-weight: bold; border-radius: 8px; margin-top: 15px; cursor: pointer; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+        .code-box { background: #0f172a; border: 1px solid #334155; padding: 12px; border-radius: 8px; margin-top: 15px; display: none; position: relative; }
+        .code-text { font-family: monospace; color: var(--secondary); font-size: 13px; word-break: break-all; padding-right: 50px; }
+        .btn-copy { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: var(--card); border: 1px solid #475569; color: var(--text); padding: 4px 8px; font-size: 11px; border-radius: 4px; cursor: pointer; }
+        .footer-info { margin-top: 25px; padding-top: 15px; border-top: 1px solid #334155; font-size: 12px; color: var(--text-muted); }
+        .footer-info p { margin-bottom: 4px; }
+        .highlight { color: #f43f5e; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="poster-container">
-        <!-- 主标题 -->
-        <div class="title">2026美加墨世界杯</div>
+<div class="container">
+    <h1>2026世界杯福利系统</h1>
+    <div class="subtitle">自助试算福利 · 一键生成申请代码</div>
 
-        <!-- 安卓下载指引 -->
-        <div class="download-info">
-            <span class="highlight-gold">安卓：</span>应用市场搜索：<span class="highlight-gold">企聊宝</span><br>
-            如果搜索没有，下载<span class="highlight-gold">应用宝</span>再搜索
-        </div>
-
-        <!-- 企业邀请码 -->
-        <div class="invite-box">
-            企业邀请码：YB888
-        </div>
-
-        <!-- 苹果下载指引 -->
-        <div class="download-info">
-            <span class="highlight-gold">苹果下载：</span>苹果商店搜索<span class="highlight-gold">企聊宝</span>
-        </div>
-
-        <!-- 管理员添加内群 -->
-        <div class="admin-box">
-            <div class="sub-title">添加下方ID，拉入新的企聊宝内群！！</div>
-            <div class="contact-id">☀️ 阿星管理：x0806 ☀️</div>
-        </div>
-
-        <!-- 发送代码框 -->
-        <div class="code-box">
-            &gt;&gt;&gt; 发送代码：[<span class="code-space"></span>] &lt;&lt;&lt;
-        </div>
+    <div class="tab-group">
+        <button class="tab-btn active" onclick="switchTab('newbie')">新人尊享三重礼</button>
+        <button class="tab-btn" onclick="switchTab('referral')">呼朋唤友裂变奖</button>
     </div>
 
-</body>
-</html>
+    <!-- 选项卡 1：新人尊享 -->
+    <div id="panel-newbie" class="panel active">
+        <div class="form-group">
+            <label>输入首次存款金额 (元):</label>
+            <input type="number" id="newbie-amount" placeholder="例如: 1000" oninput="calcNewbie()">
+        </div>
+        <div class="form-group">
+            <label>选择想要参与的活动:</label>
+            <div class="radio-box" onclick="setRadio('act1')">
+                <input type="radio" name="newbie-act" id="act1" value="act1" checked change="calcNewbie()">
+                <span>活动一：全额包赔 (输光全退)</span>
+            </div>
+            <div class="radio-box" onclick="setRadio('act2')">
+                <input type="radio" name="newbie-act" id="act2" value="act2" change="calcNewbie()">
+                <span>活动二：赠送固定彩金</span>
+            </div>
+            <div class="radio-box" onclick="setRadio('act3')">
+                <input type="radio" name="newbie-act" id="act3" value="act3" change="calcNewbie()">
+                <span>活动三：高额金额返还 (天天领)</span>
+            </div>
+        </div>
+        <div class="calc-result" id="newbie-result">请输入金额查看预计可得福利...</div>
+        <button class="btn-submit" onclick="submitForm('newbie')">确认获取代码</button>
+    </div>
+
+    <!-- 选项卡 2：呼朋唤友 -->
+    <div id="panel-referral" class="panel">
+        <div class="form-group">
+            <label>被推荐人（好友）首存金额 (元):</label>
+            <input type="number" id="ref-amount" placeholder="例如: 5000" oninput="calcReferral()">
+        </div>
+        <div class="form-group">
+            <label>推荐人（您自己）选择福利形式:</label>
+            <select id="ref-type" onchange="calcReferral()">
+                <option value="bonus">选项 A：领取现金彩金</option>
+                <option value="cover">选项 B：领取包赔福利</option>
+            </select>
+        </div>
+        <div class="calc-result" id="referral-result">请输入好友存款金额查看您的奖励...</div>
+        <button class="btn-submit" onclick="submitForm('referral')">确认获取代码</button>
+    </div>
+
+    <!-- 代码输出容器 -->
+    <div class="code-box" id="code-container">
+        <div class="code-text" id="code-display"></div>
+        <button class="btn-copy" onclick="copyCode()">复制</button>
+    </div>
+
+    <!-- 底部下载及联系信息 -->
+    <div class="footer-info">
+        <p>⚠️ <span class="highlight">规则：</span>介绍新会员需在申请完首存后连续投注3天以上，一次性会员作废。</p>
+        <p>📱 <span style="color:#60a5fa">软件下载：</span>安卓在应用宝/苹果在App Store搜索【企聊宝】</p>
+        <p>🔑 <span style="color:#f59e0b">企业邀请码：</span><strong>YB888</strong></p>
+        <p>👤 <span style="color:#34d399">客服对接：</span>添加ID联系管理阿星 <strong style="color:white;background:#475569;padding:1px 4px;border-radius:3px;">x0806</strong> 发送代码领奖</p>
+    </div>
+</div>
+
+<script>
+    // 基础数据矩阵
+    const newbieRules = {
+        act1: [{d:50,v:50},{d:100,v:100},{d:300,v:300},{d:500,v:500},{d:1000,v:1000},{d:3000,v:1200},{d:5000,v:1800},{d:10000,v:2000}],
+        act2: [{d:50,v:18},{d:100,v:38},{d:300,v:48},{d:500,v:88},{d:1000,v:128},{d:3000,v:168},{d:5000,v:208},{d:10000,v:588}],
+        act3: [{d:500,v:500,t:10,p:50},{d:1000,v:1000,t:20,p:50},{d:2000,v:2000,t:29,p:70},{d:5000,v:3000,t:37,p:80}]
+    };
+    const refRules = [
+        {d:100,b:28,c:38},{d:500,b:58,c:68},{d:1000,b:88,c:108},{d:3000,b:158,c:198},{d:5000,b:188,c:208},{d:10000,b:288,c:388},{d:30000,b:688,c:888},{d:50000,b:888,c:1288}
+    ];
+
+    function switchTab(tab) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+        if(tab==='newbie'){
+            document.querySelectorAll('.tab-btn')[0].classList.add('active');
+            document.getElementById('panel-newbie').classList.add('active');
+        }else{
+            document.querySelectorAll('.tab-btn')[1].classList.add('active');
+            document.getElementById('panel-referral').classList.add('active');
+        }
+        document.getElementById('code-container').style.display = 'none';
+    }
+
+    function setRadio(id) {
+        document.getElementById(id).checked = true;
+        calcNewbie();
+    }
+
+    function matchRule(amount, rules) {
+        let sorted = [...rules].sort((a,b)=>b.d - a.d);
+        return sorted.find(r => amount >= r.d);
+    }
+
+    function calcNewbie() {
+        let amt = parseFloat(document.getElementById('newbie-amount').value);
+        let act = document.querySelector('input[name="newbie-act"]:checked').value;
+        let resDiv = document.getElementById('newbie-result');
+        if(!amt || amt <= 0) { resDiv.innerHTML = "请输入金额查看预计可得福利..."; return; }
+        
+        let match = matchRule(amt, newbieRules[act]);
+        if(!match) { resDiv.innerHTML = "❌ 未达到该活动最低门槛金额"; return; }
+
+        if(act==='act1') resDiv.innerHTML = `🎉 匹配【全额包赔】档位:${match.d}元，可享 <strong style="color:white">${match.v}元</strong> 全额包赔！`;
+        if(act==='act2') resDiv.innerHTML = `🎉 匹配【赠送彩金】档位:${match.d}元，可额外获赠 <strong style="color:white">${match.v}元</strong> 彩金！`;
+        if(act==='act3') resDiv.innerHTML = `🎉 匹配【金额返还】档位:${match.d}元，总返 <strong style="color:white">${match.v}元</strong>（每天返${match.p}元，分${match.t}天领完）！`;
+    }
+
+    function calcReferral() {
+        let amt = parseFloat(document.getElementById('ref-amount').value);
+        let type = document.getElementById('ref-type').value;
+        let resDiv = document.getElementById('referral-result');
+        if(!amt || amt <= 0) { resDiv.innerHTML = "请输入好友存款金额查看您的奖励..."; return; }
+
+        let match = matchRule(amt, refRules);
+        if(!match) { resDiv.innerHTML = "❌ 好友存款未达到最低推荐门槛(100元)"; return; }
+
+        if(type==='bonus') resDiv.innerHTML = `🎁 好友属于 ${match.d} 元档，您选择彩金，可获得 <strong style="color:white">${match.b}元</strong> 现金彩金！`;
+        if(type==='cover') resDiv.innerHTML = `🛡️ 好友属于 ${match.d} 元档，您选择包赔，可获得 <strong style="color:white">${match.c}元</strong> 包赔福利！`;
+    }
+
+    function submitForm(type) {
+        let salt = Math.random().toString(36).substring(2,6).toUpperCase();
+        let codeStr = "";
+        
+        if(type === 'newbie') {
+            let amt = parseFloat(document.getElementById('newbie-amount').value);
+            let act = document.querySelector('input[name="newbie-act"]:checked').value;
+            let match = matchRule(amt, newbieRules[act]);
